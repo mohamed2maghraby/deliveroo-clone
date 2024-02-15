@@ -8,10 +8,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 export default function App() {
   const Stack = createNativeStackNavigator();
   return (
-    <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
-        </Stack.Navigator>
-    </NavigationContainer>
+    <>
+      <StatusBar style="light" hidden={true}/>
+      <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={HomeScreen} />
+          </Stack.Navigator>
+      </NavigationContainer>
+    </>
   );
 }
